@@ -1,5 +1,5 @@
 {% set name = "saa" %}
-{% set version = "0.0.6" %}
+{% set version = "0.0.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/saa-{{ version }}.tar.gz
-  sha256: 9a54b12aacf5dd6f2869cde95b5ee9e87c30255961c013e035498519c1838d2a
+  sha256: 17c3dd3fa92b6b3444334f29a10f3090e29fd0cbeaa555b9334b9bcbd7306574
 
 build:
   noarch: python
