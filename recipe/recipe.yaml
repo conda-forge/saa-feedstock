@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: saa
-  version: 0.0.9
+  version: "0.1.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/saa-${{ version }}.tar.gz
-  sha256: fd7e432ede573e6ebb04444124492470c46422997bba7cc8147e7338ac83eef1
+  sha256: 69006802e71a9e087aaafd82a46b12eced02ed6a7a595c47ebfd17815064347f
 
 build:
   number: 0
