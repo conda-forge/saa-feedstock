@@ -2,7 +2,8 @@ schema_version: 1
 
 context:
   name: saa
-  version: 0.0.9
+  version: "0.1.0"
+  python_min: "3.12"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/saa-${{ version }}.tar.gz
-  sha256: fd7e432ede573e6ebb04444124492470c46422997bba7cc8147e7338ac83eef1
+  sha256: 69006802e71a9e087aaafd82a46b12eced02ed6a7a595c47ebfd17815064347f
 
 build:
   number: 0
@@ -20,7 +21,7 @@ build:
 requirements:
   host:
     - python ${{ python_min }}.*
-    - pdm-backend
+    - uv-build >=0.11.15,<0.12
     - pip
   run:
     - python >=${{ python_min }}
@@ -30,7 +31,9 @@ tests:
       imports:
         - saa
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   summary: Converting time into natural language phrases
